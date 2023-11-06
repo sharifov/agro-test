@@ -1,6 +1,7 @@
 {
     "require": {
-        "symfony/yaml": "^5.1"
+        "symfony/yaml": "^5.1",
+        "ext-intl": "*"
     },
     "require-dev": {
         "phpmd/phpmd": "@stable",

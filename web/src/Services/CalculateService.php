@@ -2,8 +2,8 @@
 
 namespace Agro\Services;
 
-use Agro\Entities\CountryEntity;
-use Agro\Entities\ProductEntity;
+use Agro\Entities\ICountryEntity;
+use Agro\Entities\IProductEntity;
 use NumberFormatter;
 
 class CalculateService
@@ -14,8 +14,8 @@ class CalculateService
     private float $calculatedSum;
 
     public function __construct(
-        private readonly ProductEntity $product,
-        private readonly CountryEntity $country
+        private readonly IProductEntity $product,
+        private readonly ICountryEntity $country
     ) {
     }
 
@@ -32,12 +32,12 @@ class CalculateService
         return $numberFormat->format($this->calculatedSum);
     }
 
-    public function getProduct(): ProductEntity
+    public function getProduct(): IProductEntity
     {
         return $this->product;
     }
 
-    public function getCountry(): CountryEntity
+    public function getCountry(): ICountryEntity
     {
         return $this->country;
     }

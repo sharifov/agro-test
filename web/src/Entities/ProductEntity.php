@@ -2,7 +2,7 @@
 
 namespace Agro\Entities;
 
-class ProductEntity
+class ProductEntity implements IProductEntity
 {
     private int $id;
 

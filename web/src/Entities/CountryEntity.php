@@ -2,7 +2,7 @@
 
 namespace Agro\Entities;
 
-class CountryEntity
+class CountryEntity implements ICountryEntity
 {
     private int $id;
 
